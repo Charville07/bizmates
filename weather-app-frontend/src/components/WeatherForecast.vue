@@ -415,6 +415,10 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
 }
 
+.forecast-card p{
+  margin:0.5%;
+}
+
 .popular-places-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -442,7 +446,7 @@ export default {
   min-width: 200px;
 }
 
-.place h3 {
+.place h4 {
   margin: 0;
   font-size: 18px;
 }
