@@ -16,7 +16,7 @@ class WeatherController extends Controller
 
     public function getWeather(Request $request)
     {
-        $city = $request->input('city', 'London');
+        $city = $request->input('city', 'London'); // Default to London if no city is provided
         $weatherData = $this->weatherService->getWeatherData($city);
 
         if ($weatherData) {
@@ -26,4 +26,3 @@ class WeatherController extends Controller
         return response()->json(['error' => 'Unable to fetch weather data'], 500);
     }
 }
-    

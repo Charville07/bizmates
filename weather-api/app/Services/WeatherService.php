@@ -2,30 +2,35 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 
 class WeatherService
 {
+    protected $client;
     protected $apiKey;
 
     public function __construct()
     {
+        $this->client = new Client();
         $this->apiKey = env('OPENWEATHERMAP_API_KEY');
     }
 
-    public function getWeatherData(string $city)
+    public function getWeatherData($city)
     {
-        $url = "https://api.openweathermap.org/data/2.5/forecast";
-        $response = Http::get($url, [
-            'q' => $city,
-            'appid' => $this->apiKey,
-            'units' => 'metric',
-        ]);
+        try {
+            $response = $this->client->request('GET', 'https://api.openweathermap.org/data/2.5/forecast', [
+                'query' => [
+                    'q' => $city,
+                    'appid' => $this->apiKey,
+                    'units' => 'metric',
+                ],
+            ]);
 
-        if ($response->successful()) {
-            return $response->json();
+            return json_decode($response->getBody()->getContents(), true);
+        } catch (RequestException $e) {
+            \Log::error('Error fetching weather data: ' . $e->getMessage());
+            return null;
         }
-
-        return null;
     }
 }
