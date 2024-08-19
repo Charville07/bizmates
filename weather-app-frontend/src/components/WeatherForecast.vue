@@ -240,14 +240,15 @@ export default {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 10px;
+  gap: 2%; /* Adjust the gap based on screen size */
 }
 
 .city-button {
   position: relative;
+  height: 14.5%;
   flex: 1;
   margin: 0;
-  padding: 20px;
+  padding: 2em;
   font-size: 16px;
   color: transparent;
   border: none;
@@ -355,7 +356,7 @@ export default {
 .weather-details {
   background: rgb(23 10 10 / 49%); /* Semi-transparent white */
   border: 0.5px solid rgba(255, 255, 255, 0.5); /* Lighter border to enhance the glass effect */
-  display: flex;
+  display: block;
   align-items: center; /* Align items vertically centered */
   justify-content: space-evenly; /* Space items evenly */
   width: 100%; /* Full width of the container */
@@ -377,12 +378,17 @@ export default {
   height: 50px;
 }
 
+img, .weather-icon {
+  max-width: 100%; /* Ensure images don't overflow their containers */
+  height: auto;
+}
+
 .large-text {
   margin-top: 0%; /* Space between weather details and large text */
 }
 
 .large-text h1 {
-  font-size: 5rem; /* Adjust size as needed */
+  font-size: 4vw; /* Adjust size as needed */
   color:#fff4f4;
   text-shadow:
         0.07em 0 black,
@@ -407,7 +413,7 @@ export default {
         0.07em 0 black,
         0 0.07em black;
   border-radius: 8px;
-  padding: 15px;
+  padding: 1.2%;
   min-width: 150px;
   flex: 1;
   backdrop-filter: blur(1.3px); /* Apply blur effect */
@@ -424,7 +430,7 @@ export default {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin: 20px;
+  margin: 10px 0;
 }
 
 .popular-places-card h3 {
@@ -432,7 +438,7 @@ export default {
 }
 
 .places {
-  display: flex;
+  display: block;
   overflow-x: auto;
   gap: 10px;
   padding: 10px 0;
@@ -458,4 +464,120 @@ export default {
 .place p strong {
   font-weight: bold;
 }
+
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar-top{
+    padding-bottom: 0;
+  }
+  .sidebar, .content {
+    width: 95.5%;
+    border-right: none;
+  }
+  .city-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .city-button {
+    flex: 1 1 48%; /* Allow two buttons per row */
+    margin-bottom: 10px;
+    padding: 4em;
+  }
+  .card.container-card{
+    margin:0;
+  }
+
+  .forecast-cards {
+    flex-direction: column;
+  }
+  .forecast-card {
+    min-width: 100%;
+    padding:0;
+  }
+  .app-card {
+    height: auto; /* Make sure height adjusts to content */
+    padding: 5%; /* Use percentage for padding */
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar, .content {
+    width: 95.5%;
+    border-right: none;
+  }
+  .city-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .city-button {
+    flex: 1 1 48%; /* Allow two buttons per row */
+    margin-bottom: 10px;
+  }
+
+  .forecast-cards {
+    flex-direction: column;
+  }
+  .forecast-card {
+    min-width: 100%;
+  }
+  .app-card {
+    height: auto; /* Make sure height adjusts to content */
+    padding: 5%; /* Use percentage for padding */
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .weather {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 95.5%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .content {
+    padding: 10px;
+  }
+  .city-button {
+    flex: none;
+    margin-bottom: 10px;
+    padding:8.5%;
+  }
+  .forecast-cards {
+    flex-direction: column;
+  }
+  .forecast-card {
+    min-width: 100%;
+  }
+  .app-card {
+    height: auto; /* Make sure height adjusts to content */
+    padding: 5%; /* Use percentage for padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 5px;
+  }
+  .city-button {
+    padding: 15%;
+    font-size: 12px;
+  }
+  .large-text h1 {
+    font-size: 3rem;
+  }
+}
+
+
 </style>
