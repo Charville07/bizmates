@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">Frameworks Used<br>Laravel - for Backend API<br>Vue JS - for Front End<br><br>Thirdparty Tools<br>https://openweathermap.org/forecast5<br>https://developer.foursquare.com/docs/api/venues/search</p>
+<p align="left">Frameworks Used<br>Laravel - for Backend API<br>Vue JS - for Front End<br><br>Thirdparty Services<br>https://openweathermap.org/forecast5<br>https://developer.foursquare.com/docs/api/venues/search</p>
 
 ###
 
