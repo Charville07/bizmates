@@ -1,0 +1,63 @@
+<div class="app-card">
+    <div class="weather">
+      <div class="container">
+        <div class="sidebar">
+          <div class="sidebar-top">
+            <h3>Select City</h3>
+            <div class="city-buttons">
+              <button class="city-button tokyo" @mouseover="onMouseOver" @mouseout="onMouseOut" @click="fetchWeather('Tokyo')" data-text="Tokyo"></button>
+              <button class="city-button yokohama" @mouseover="onMouseOver" @mouseout="onMouseOut" @click="fetchWeather('Yokohama')" data-text="Yokohama"></button>
+              <button class="city-button kyoto" @mouseover="onMouseOver" @mouseout="onMouseOut" @click="fetchWeather('Kyoto')" data-text="Kyoto"></button>
+              <button class="city-button osaka" @mouseover="onMouseOver" @mouseout="onMouseOut" @click="fetchWeather('Osaka')" data-text="Osaka"></button>
+              <button class="city-button sapporo" @mouseover="onMouseOver" @mouseout="onMouseOut" @click="fetchWeather('Sapporo')" data-text="Sapporo"></button>
+              <button class="city-button nagoya" @mouseover="onMouseOver" @mouseout="onMouseOut" @click="fetchWeather('Nagoya')" data-text="Nagoya"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="card container-card" :style="{ backgroundImage: 'url(' + currentCityBackground + ')' }">
+            <div v-if="todayWeather" class="today-card">
+
+              <div class="large-text">
+                <h1>{{ selectedCity }}</h1> <!-- Display the city name -->
+              </div>
+
+              <div class="weather-details">
+                <img :src="todayWeather.icon" alt="Weather icon" class="weather-icon" @error="onImageError" />
+                <div class="weather-info">
+                  <p><strong>Temperature:</strong> {{ todayWeather.temp }}°C</p>
+                  <p><strong>Condition:</strong> {{ todayWeather.condition }}</p>
+                  <p><strong>Humidity:</strong> {{ todayWeather.humidity }}%</p>
+                  <p><strong>Wind Speed:</strong> {{ todayWeather.windSpeed }} m/s</p>
+                  <p><strong>Description:</strong> {{ todayWeather.description }}</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div v-if="futureWeather.length" class="forecast">
+              <div class="forecast-cards">
+                <div class="forecast-card" v-for="(day, index) in futureWeather" :key="index">
+                  <h2>{{ day.date }}</h2>
+                  <p><strong>Temperature:</strong> {{ day.temp }}°C</p>
+                  <p><strong>Condition:</strong> {{ day.condition }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div v-if="popularPlaces.length" class="card popular-places-card">
+            <h3>Popular Places in {{ selectedCity }}</h3>
+            <div class="places">
+              <div class="place" v-for="place in popularPlaces" :key="place.fsq_id">
+                <h4>{{ place.name }}</h4>
+                <p><strong>Address:</strong> {{ place.location.address || 'No address available' }}</p>
+                <p><strong>Category:</strong> {{ place.categories[0]?.name || 'N/A' }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
