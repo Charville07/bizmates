@@ -18,16 +18,22 @@
 
 ###
 
-<h3 align="center">Web/Mobile</h3>
+<h3 align="center">Web</h3>
 
 ###
 
-<img align="left" height="500" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGRpN29mdDlkN2dtMHQ5aGVwMHJ5NDFpbHplcWFkd2QyNTFsemxmbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a3isCKekundkBWWRHd/giphy.gif"  />
+<div align="center">
+  <img height="350" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGRpN29mdDlkN2dtMHQ5aGVwMHJ5NDFpbHplcWFkd2QyNTFsemxmbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a3isCKekundkBWWRHd/giphy.gif"  />
+</div>
 
 ###
 
-<div align="right">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnlqZDNxYm11aWR2OHZzemxvd3JmYTduOWJsdGZ1ajByeW5nOHd6MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mvsbiXoCYQTjOv90jM/giphy.gif" />
+<h3 align="center">Mobile</h3>
+
+###
+
+<div align="center">
+  <img height="350" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdtdTBpMjA5amN0azFteTYwbXdqcDVweTAxY3RxcXFnb2J4M2FncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mvsbiXoCYQTjOv90jM/giphy.gif"  />
 </div>
 
 ###
