@@ -50,7 +50,7 @@
 
 ###
 
-<p align="left">You can select up to 5 cities in Japan to view their current weather, along with a 5-day forecast and a list of popular nearby shops.</p>
+<p align="left">You can select up to 6 cities in Japan to view their current weather, along with a 5-day forecast and a list of popular nearby shops.</p>
 
 ###
 
