@@ -33,7 +33,7 @@
 ###
 
 <div align="center">
-  <img height="450" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjBtc2E0MGxxeDAzaGxkZXhuM2ZsZjNuNzB0NzZsbjMzaHhhMHRmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YAi6V8BXA3RS2Mdr8y/giphy.gif"  />
+  <img height="350" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjBtc2E0MGxxeDAzaGxkZXhuM2ZsZjNuNzB0NzZsbjMzaHhhMHRmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YAi6V8BXA3RS2Mdr8y/giphy.gif"  />
 </div>
 
 ###
@@ -43,6 +43,14 @@
 ###
 
 <p align="left">I did what is required by the coding test and checked all the boxes<br><br>✅ Advance usage of HTML5 , CSS3, JavaScript ES5 or ES6 or any JS Library preferred (usage of VueJS a plus)<br><br>✅ PHP Framework Laravel<br><br>✅ OOP principles and clean code<br><br>✅ API approach instead of monolithic<br><br>✅ Responsive behaviour in Desktop and Mobile</p>
+
+###
+
+<h2 align="left">Weather App Features</h2>
+
+###
+
+<p align="left">You can select up to 5 cities in Japan to view their current weather, along with a 5-day forecast and a list of popular nearby shops.</p>
 
 ###
 
