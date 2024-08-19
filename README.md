@@ -18,7 +18,7 @@
 
 ###
 
-<p align="center">Web</p>
+<h3 align="center">Web</h3>
 
 ###
 
@@ -28,7 +28,7 @@
 
 ###
 
-<p align="center">Mobile</p>
+<h3 align="center">Mobile</h3>
 
 ###
 
